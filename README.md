@@ -11,21 +11,21 @@ Built as part of the FlyRank AI Internship — Frontend AI Engineering Track (as
 - **Framework:** Next.js (App Router) + TypeScript
 - **Styling:** Tailwind CSS
 - **Deployment:** Vercel (auto-deploys from `main`)
-- **AI:** Claude API (streaming integration — in progress, see roadmap below)
+- **AI:** Google Gemini API (flashcard generation via Next.js API route)
 
 ## Project Status
 
-🚧 In active development. Current milestone: **FE-05 (capstone skeleton, deployed)**.
+🚧 In active development. Current milestone: **Final capstone — AI integration complete, working toward production readiness (testing, accessibility, deployment).**
 
 ### What's built so far
 - Home page with hero, feature highlights, and CTA buttons
-- `/generate` — flashcard generation page (placeholder, AI integration coming in FE-06)
-- `/study` — flashcard study/review page (placeholder)
+- `/generate` — AI-powered flashcard generation page, calling Gemini via a Next.js API route
+- `/study` — flashcard study/review page with flip-card navigation
 - `/health` — health-check page verifying server-side data fetching, with mock data and status indicators
 - Responsive nav bar and base Tailwind design system
 
 ### Roadmap
-- **FE-06:** Streaming AI chat interface — Claude API route handler + `useChat` on the frontend. This becomes StudySpark's real flashcard-generation engine.
+
 - **FE-07 – FE-11:** Additional features building toward a production-ready app (details TBD as each assignment is scoped)
 - **FE-12:** Final case study and capstone submission — live URL, README, AI integration write-up, ≥50% test coverage, Lighthouse ≥85, WCAG AA compliance, deployment checklist, and written reflection
 
