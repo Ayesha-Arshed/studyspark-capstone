@@ -137,7 +137,7 @@ export async function POST(request: Request) {
           responseMimeType: "application/json",
         },
       }),
-      signal: AbortSignal.timeout(20000),
+      signal: AbortSignal.timeout(30000),
     });
 
     if (!response.ok) {
@@ -171,13 +171,23 @@ export async function POST(request: Request) {
       );
     }
 
-    let parsed: GeminiParsedResponse;
+      let parsed: GeminiParsedResponse;
     try {
-      parsed = JSON.parse(rawText) as GeminiParsedResponse;
-    } catch {
+      const cleanedText = rawText
+        .trim()
+        .replace(/^```json\s*/i, "")
+        .replace(/^```\s*/i, "")
+        .replace(/```\s*$/i, "")
+        .trim();
+      parsed = JSON.parse(cleanedText) as GeminiParsedResponse;
+    }  catch (parseErr){
       return Response.json(
-        { error: "Failed to parse flashcard JSON from Gemini response." },
+         { 
+          error: "Failed to parse flashcard JSON from Gemini response.",
+          debug_raw: rawText.slice(0, 1000)
+        },
         { status: 502 }
+       
       );
     }
 
@@ -221,7 +231,7 @@ export async function POST(request: Request) {
   } catch (err) {
     if (err instanceof DOMException && err.name === "TimeoutError") {
       return Response.json(
-        { error: "Flashcard generation timed out after 20 seconds." },
+        { error: "Flashcard generation timed out after 30 seconds." },
         { status: 504 }
       );
     }
