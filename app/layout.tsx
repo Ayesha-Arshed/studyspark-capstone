@@ -48,14 +48,14 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <header className="sticky top-0 z-50 w-full border-b border-border bg-card/80 backdrop-blur">
           <div className="mx-auto max-w-5xl px-6 h-16 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
               <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-white font-bold text-sm">S</span>
               </div>
               <span className="font-semibold text-lg tracking-tight">
                 StudySpark
               </span>
-            </Link>
+            </div>
             <nav className="flex items-center gap-8">
               <NavLink href="/">Home</NavLink>
               <NavLink href="/generate">Generate</NavLink>

@@ -52,7 +52,7 @@ export default function Home() {
               />
             </svg>
           </div>
-          <h3 className="font-semibold text-foreground mb-2">AI Generation</h3>
+          <h2 className="font-semibold text-foreground mb-2">AI Generation</h2>
           <p className="text-sm text-muted">
             Paste any text and let AI create high-quality flashcards for you.
           </p>
@@ -74,7 +74,7 @@ export default function Home() {
               />
             </svg>
           </div>
-          <h3 className="font-semibold text-foreground mb-2">Smart Review</h3>
+          <h2 className="font-semibold text-foreground mb-2">Smart Review</h2>
           <p className="text-sm text-muted">
             Spaced repetition algorithm helps you remember long-term.
           </p>
@@ -96,7 +96,7 @@ export default function Home() {
               />
             </svg>
           </div>
-          <h3 className="font-semibold text-foreground mb-2">Track Progress</h3>
+          <h2 className="font-semibold text-foreground mb-2">Track Progress</h2>
           <p className="text-sm text-muted">
             See your improvement with detailed stats and analytics.
           </p>
