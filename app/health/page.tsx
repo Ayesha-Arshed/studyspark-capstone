@@ -39,12 +39,12 @@ export default async function HealthPage() {
   const data = await getHealthData();
 
   return (
-    <div className="flex flex-col py-12">
-      <div className="mb-10">
-        <h1 className="text-4xl font-bold tracking-tight text-foreground mb-3">
+    <div className="flex flex-col py-8 sm:py-12 px-1 sm:px-0">
+      <div className="mb-6 sm:mb-10">
+        <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-foreground mb-2 sm:mb-3 break-words">
           System Health
         </h1>
-        <p className="text-lg text-muted">
+        <p className="text-base sm:text-lg text-muted">
           Live status of all StudySpark services.
         </p>
       </div>
@@ -53,11 +53,11 @@ export default async function HealthPage() {
         {data.map((item) => (
           <div
             key={item.label}
-            className="flex items-center justify-between px-6 py-4"
+            className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 text-sm sm:text-base"
           >
             <div className="flex items-center gap-3">
               <span
-                className={`inline-flex h-2.5 w-2.5 rounded-full ${
+                className={`inline-flex h-2.5 w-2.5 rounded-full shrink-0 ${
                   item.status === "healthy"
                     ? "bg-green-500"
                     : "bg-primary"
@@ -65,12 +65,12 @@ export default async function HealthPage() {
               />
               <span className="font-medium text-foreground">{item.label}</span>
             </div>
-            <span className="text-muted">{item.value}</span>
+            <span className="text-muted font-mono text-xs sm:text-sm">{item.value}</span>
           </div>
         ))}
       </div>
 
-      <div className="mt-8 text-sm text-muted text-center">
+      <div className="mt-6 sm:mt-8 text-xs sm:text-sm text-muted text-center">
         Last checked: {new Date().toLocaleTimeString()}
       </div>
     </div>

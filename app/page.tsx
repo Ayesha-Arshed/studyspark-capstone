@@ -2,40 +2,40 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center py-20 text-center">
-      <div className="inline-flex items-center gap-2 rounded-full bg-primary-light px-4 py-1.5 mb-8">
+    <div className="flex flex-col items-center justify-center py-10 sm:py-20 text-center">
+      <div className="inline-flex items-center gap-2 rounded-full bg-primary-light px-3.5 py-1.5 sm:px-4 mb-6 sm:mb-8">
         <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-        <span className="text-sm font-medium text-primary">
+        <span className="text-xs sm:text-sm font-medium text-primary">
           AI-Powered Learning
         </span>
       </div>
 
-      <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-foreground mb-6">
+      <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-4 sm:mb-6 break-words max-w-full">
         StudySpark
       </h1>
 
-      <p className="max-w-2xl text-lg leading-8 text-muted mb-10">
+      <p className="max-w-2xl text-base sm:text-lg leading-7 sm:leading-8 text-muted mb-8 sm:mb-10 px-2 sm:px-0">
         Transform your notes and textbooks into smart flashcards instantly.
         Powered by AI, designed for learners who want to study efficiently and
         remember more.
       </p>
 
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
         <Link
           href="/generate"
-          className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-medium text-white shadow-sm transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          className="inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-primary px-8 text-base font-medium text-white shadow-sm transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
           Generate Flashcards
         </Link>
         <Link
           href="/study"
-          className="inline-flex h-12 items-center justify-center rounded-lg border border-border bg-card px-8 text-base font-medium text-foreground transition-colors hover:bg-primary-light"
+          className="inline-flex h-12 w-full sm:w-auto items-center justify-center rounded-lg border border-border bg-card px-8 text-base font-medium text-foreground transition-colors hover:bg-primary-light"
         >
           Start Studying
         </Link>
       </div>
 
-      <div className="mt-24 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-3xl">
+      <div className="mt-12 sm:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 w-full max-w-3xl">
         <div className="rounded-xl border border-border bg-card p-6 text-left">
           <div className="h-10 w-10 rounded-lg bg-primary-light flex items-center justify-center mb-4">
             <svg
