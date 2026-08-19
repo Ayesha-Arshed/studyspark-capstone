@@ -15,7 +15,6 @@
 - [x] API key marked as **Sensitive** (hidden after save)
 - [x] Key exists in `.env.local` for local development and is **excluded from git** via `.gitignore`
 - [x] Confirmed live app can reach the Gemini API without the "GEMINI_API_KEY is not set" error
-- [ ] *(Optional, not required for this submission)* Same key added to Preview/Development environments
 
 ## 2. Build & Deploy
 
