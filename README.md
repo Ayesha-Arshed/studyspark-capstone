@@ -28,16 +28,18 @@ Built as part of the FlyRank AI Internship — Frontend AI Engineering Track. Th
 
 ## Architecture Overview
 
+```
 app/
-├── page.tsx # Home page
-├── layout.tsx # Root layout: wraps every page in Navbar + footer
-├── generate/page.tsx # Generate flashcards UI — form, validation, API call, results
-├── study/page.tsx # Study UI — reads flashcards from sessionStorage, flip/next/prev
-├── health/page.tsx # Async server component, renders mock service status
-└── api/generate/route.ts # POST handler — validates input, calls Gemini, parses/validates output
+├── page.tsx                 # Home page
+├── layout.tsx                # Root layout: wraps every page in Navbar + footer
+├── generate/page.tsx         # Generate flashcards UI — form, validation, API call, results
+├── study/page.tsx            # Study UI — reads flashcards from sessionStorage, flip/next/prev
+├── health/page.tsx           # Async server component, renders mock service status
+└── api/generate/route.ts     # POST handler — validates input, calls Gemini, parses/validates output
 
 components/
-└── Navbar.tsx # Client component — responsive nav with mobile hamburger menu
+└── Navbar.tsx                # Client component — responsive nav with mobile hamburger menu
+```
 
 
 **Flow:** `Generate` page → user submits notes → client calls `POST /api/generate` → API route validates the input, calls the Gemini API with a system prompt, parses and validates the JSON response, returns clean flashcard data → client stores the result in `sessionStorage` → `Study` page reads from `sessionStorage` and renders the flip-card review UI.
@@ -122,7 +124,9 @@ npm install
 
 Create a file named `.env.local` in the project root with:
 
+```
 GEMINI_API_KEY=your_gemini_api_key_here
+```
 
 
 Get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). Without this, `/generate` will return a server configuration error.
