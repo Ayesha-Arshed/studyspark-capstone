@@ -4,7 +4,7 @@
 **Live URL:** https://studyspark-capstone.vercel.app
 **Repository:** https://github.com/Ayesha-Arshed/studyspark-capstone
 **Hosting:** Vercel (auto-deploys from `main` branch)
-**Date signed off:** [FILL IN TODAY'S DATE]
+**Date signed off:** 19 August 2026
 **Signed off by:** Ayesha Arshed
 
 ---
@@ -98,4 +98,4 @@
 
 ---
 
-**Sign-off:** This checklist was completed and verified against the live production deployment at studyspark-capstone.vercel.app on [DATE].
+**Sign-off:** This checklist was completed and verified against the live production deployment at studyspark-capstone.vercel.app on 19 August 2026.
